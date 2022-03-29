@@ -9,7 +9,7 @@ class MosPage:
     def __init__(self, browser):
         self.browser = browser
         self.url = 'https://www.mos.ru/'
-        self.timeout = int(os.getenv('TIMEOUT')) or 30
+        self.timeout = int(os.getenv('TIMEOUT') or 30)
 
     def open(self):
         self.browser.get(self.url)
