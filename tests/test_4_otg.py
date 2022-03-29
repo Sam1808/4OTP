@@ -40,6 +40,7 @@ def test_4_otg(browser):
     with allure.step('Step #2: Check Header & Footer'):
         try:
             mos_page.check_header_by_text('Официальный сайт Мэра Москвы')
+            browser.execute_script("window.scrollBy(0, 5900)")
             mos_page.check_footer_by_text('Правительства Москвы')
             allure.attach(
                 browser.get_screenshot_as_png(),
